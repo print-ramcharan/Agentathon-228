@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/xml_autofill_service_config.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/xml/autofill_service_config.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/drawable_ic_add.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/drawable/ic_add.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/drawable_ic_copy.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/drawable/ic_copy.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.guardian.mesh.app-merged_res-42:/layout_activity_login.xml.flat",
+        "source": "com.guardian.mesh.app-main-44:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/drawable_ic_close.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/drawable/ic_close.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/drawable_ic_camera.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/drawable/ic_camera.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_activity_mesh.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/activity_mesh.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_activity_auth_request.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/activity_auth_request.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/drawable_bg_scanner_border.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/drawable/bg_scanner_border.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_activity_registration.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/activity_registration.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_activity_scanner.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/activity_scanner.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_activity_credential_detail.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/activity_credential_detail.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_layout_account_picker.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/layout_account_picker.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_item_credential.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/item_credential.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_activity_vault.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/activity_vault.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/drawable_ic_radar.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/drawable/ic_radar.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_dialog_add_credential.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/dialog_add_credential.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/drawable_ic_visibility.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/drawable/ic_visibility.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_activity_main.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_activity_add_credential.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/activity_add_credential.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/layout_activity_login.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/xml_accessibility_service_config.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/xml/accessibility_service_config.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/xml_backup_rules.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-merged_res-42:/xml_network_security_config.xml.flat",
+        "source": "/Users/ram/.gradle/daemon/8.12/com.guardian.mesh.app-main-44:/xml/network_security_config.xml"
+    }
+]

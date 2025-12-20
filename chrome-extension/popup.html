@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Identity</title>
+    <style>
+        body {
+            width: 320px;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .status {
+            font-size: 12px;
+            color: #10b981;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .card {
+            background: white;
+            margin: 20px;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 240px;
+        }
+
+        .qr-placeholder {
+            width: 180px;
+            height: 180px;
+            background-color: #f1f5f9;
+            margin: 0 auto 16px auto;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+
+        .device-id {
+            font-family: monospace;
+            font-size: 16px;
+            color: #334155;
+            background: #f1f5f9;
+            padding: 8px;
+            border-radius: 6px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .hint {
+            font-size: 12px;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        /* Simple spinner */
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3b82f6;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            Guardian Agent
+        </div>
+        <div class="status">● Active & Secure</div>
+    </div>
+
+    <div class="card">
+        <div id="qr-area" class="qr-placeholder">
+            <div class="loader"></div>
+        </div>
+        <div id="device-id-display" class="device-id">Generate...</div>
+        <div class="hint">Scan with Guardian App<br>to bind this browser.</div>
+    </div>
+
+    <script src="libs/qrcode.min.js"></script> <!-- We might need to fetch this or use a simple generator -->
+    <script src="popup.js"></script>
+</body>
+
+</html>

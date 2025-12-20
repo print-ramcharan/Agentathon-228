@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Guardian Mesh</string>
+    <string name="accessibility_service_description">Guardian Mesh Agent uses this service to detect login fields and securely autofill your credentials.</string>
+</resources>

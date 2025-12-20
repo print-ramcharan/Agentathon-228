@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guardian TV Login Demo</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #111;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .tv-container {
+            background: #222;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 600px;
+            border: 2px solid #333;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 24px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+            transform: scale(1.05);
+        }
+
+        .status {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #555;
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+            opacity: 0;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tv-container">
+        <h1>Netflix (TV App)</h1>
+        <p>Sign in safely with your phone</p>
+        <br>
+        <button class="btn" onclick="startLogin()">SignIn with Guardian</button>
+
+        <div class="status" id="status">Waiting for user...</div>
+        <div class="spinner" id="spinner"></div>
+    </div>
+
+    <script>
+    const BACKEND_URL = "https://unexempt-danial-unousted.ngrok-free.dev";
+    let keyPair = null;
+
+    async function generateKeys() {
+        keyPair = await crypto.subtle.generateKey(
+            { name: "RSA-OAEP", modulusLength: 2048, publicExponent: new Uint8Array([1, 0, 1]), hash: "SHA-256" },
+            true, ["decrypt"]
+        );
+        console.log("Keys Generated");
+    }
+
+    // Pem export helper
+    async function getPublicKeyPem() {
+        const exported = await crypto.subtle.exportKey("spki", keyPair.publicKey);
+        let binary = "";
+        const bytes = new Uint8Array(exported);
+        for (let i = 0; i < bytes.byteLength; i++) binary += String.fromCharCode(bytes[i]);
+        return `-----BEGIN PUBLIC KEY-----\n${btoa(binary)}\n-----END PUBLIC KEY-----\n`;
+    }
+
+    async function startLogin() {
+        if (!keyPair) await generateKeys();
+        
+        document.getElementById("spinner").classList.add("visible");
+        document.getElementById("status").innerText = "Connecting to your phone...";
+        
+        const reqId = "req-tv-" + Math.floor(Math.random() * 10000);
+        const pubKey = await getPublicKeyPem();
+
+        // 1. Send Request
+        try {
+            await fetch(`${BACKEND_URL}/agent/request`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    requestId: reqId,
+                    service: "netflix",
+                    source: "Living_Room_TV",
+                    status: "pending",
+                    timestamp: Date.now(),
+                    publicKey: pubKey
+                })
+            });
+
+            document.getElementById("status").innerText = "Check your phone to approve...";
+            poll(reqId);
+        } catch(e) {
+            document.getElementById("status").innerText = "Error: " + e.message;
+        }
+    }
+
+    async function poll(reqId) {
+        const interval = setInterval(async () => {
+            try {
+                const res = await fetch(`${BACKEND_URL}/agent/poll?requestId=${reqId}`);
+                if (res.status === 200) {
+                    const data = await res.json();
+                    clearInterval(interval);
+                    document.getElementById("status").innerText = "Decrypting...";
+                    
+                    const decrypted = await decrypt(data.credentials);
+                    document.getElementById("status").innerText = `Logged in as: ${decrypted}`; // In real app, redirect
+                    document.getElementById("spinner").classList.remove("visible");
+                }
+            } catch(e) {}
+        }, 2000);
+    }
+
+    async function decrypt(encBase64) {
+        try {
+            const encData = Uint8Array.from(atob(encBase64), c => c.charCodeAt(0));
+            const dec = await crypto.subtle.decrypt({ name: "RSA-OAEP" }, keyPair.privateKey, encData);
+            return new TextDecoder().decode(dec);
+        } catch(e) { return "Decryption Failed"; }
+    }
+    
+    generateKeys(); // Pre-generate
+    </script>
+
+</body>
+
+</html>

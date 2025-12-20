@@ -1,0 +1,4 @@
+com.guardian.mesh.test.app-androidTest-0 /Users/ram/Desktop/Agent/android-agent/app/build/generated/res/resValues/androidTest/debug
+com.guardian.mesh.test.app-mergeDebugAndroidTestResources-1 /Users/ram/Desktop/Agent/android-agent/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.guardian.mesh.test.app-mergeDebugAndroidTestResources-2 /Users/ram/Desktop/Agent/android-agent/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.guardian.mesh.test.app-merged_res-3 /Users/ram/Desktop/Agent/android-agent/app/build/intermediates/merged_res/debugAndroidTest
