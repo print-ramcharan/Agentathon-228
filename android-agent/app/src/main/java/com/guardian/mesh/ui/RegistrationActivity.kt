@@ -349,7 +349,7 @@ class RegistrationActivity : AppCompatActivity() {
             json.put("mobile", phone)
             json.put("publicKey", pubKey)
             json.put("faceData", faceBase64)
-            json.put("signature", signature)
+            json.put("signature", signature) 
             
             // Add Embedding to JSON
             val embeddingJson = org.json.JSONArray()

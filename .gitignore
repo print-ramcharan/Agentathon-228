@@ -1,0 +1,38 @@
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Android
+.gradle/
+build/
+**/build/
+captures/
+*.apk
+*.ap_
+*.dex
+native-libs/
+.externalNativeBuild/
+.cxx/
+local.properties
+
+# Go
+bin/
+mesh-backend
+**/mesh-backend
+vendor/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Data/Temporary files
+backend/users.json
+*.log
